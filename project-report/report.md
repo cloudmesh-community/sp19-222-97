@@ -38,6 +38,6 @@ The data used within this project was primarily extrapolated from data of the wi
 ---
 ## Sources
 ---
-http://news.bbc.co.uk/2/hi/health/7813637.stm
-https://science.sciencemag.org/content/290/5490/350
-https://thectwc.com/results/
+* http://news.bbc.co.uk/2/hi/health/7813637.stm
+* https://science.sciencemag.org/content/290/5490/350
+* https://thectwc.com/results/
