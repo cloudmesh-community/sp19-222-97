@@ -28,14 +28,14 @@ The analysis of the data was first done with the usage of a linear regression mo
 By usage of a data tree node to evaluate linear regression models, we can better understand which relationships between variables are meaningful and which are not.
 ## Architecture
 ---
-There are two primary structures within this experiment. The first is the linear regression model located within linear_regressor.py and data_tree.py. 
-
-The first Python module retrieves data from the google drive link and downloads it locally, given the API implementation, can send over results of analysis on the data set. It gives five distinct graphs. 
+There are two primary structures within this experiment. The first is the linear regression model located within linear_regressor.py and data_tree.py. The first Python module retrieves data from the google drive link and downloads it locally, given the API implementation, can send over results of analysis on the data set. It gives six distinct graphs. 
 1) Round vs. Score
 2) Rank vs. Year
 3) Rank vs. Score
 4) Rank vs. Rounds Won
 5) Rank vs. Score - Adjusted 
+6) Rank vs. Rounds Won - Adjusted
+As for the second module, data_tree.py, it will simply read the data and create a .dot chart from the results, which can be saved remotely just like the graphs within linear_regressor.py
 ## Dataset
 ---
 The data used within this project was primarily extrapolated from data of the winner results from the Tetris World Championships. Due to the fact that previous years represent data as only image screenshots of spreadsheets, the data had to be manually transcribed into other comma-separated value spreadsheets. Although painstaking, we managed to extract rank, year, rounds played, and composite score from the entries from 2012-2018.
