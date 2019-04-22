@@ -37,7 +37,7 @@ There are two primary structures within this experiment. The first is the linear
 5) Rank vs. Score - Adjusted 
 6) Rank vs. Rounds Won - Adjusted
 
-As for the second module, data_tree.py, it will simply read the data and create a .dot chart from the results, which can be saved remotely just like the graphs within linear_regressor.py
+As for the second module, data_tree.py, it will simply read the data and create a .dot chart from the results, which can be saved remotely just like the graphs within linear_regressor.py. Luckily, the handy Python library graphviz makes for easy use of creating the data tree to reflect the data used within this experiment.
 ## Dataset
 ---
 The data used within this project was primarily extrapolated from data of the winner results from the Tetris World Championships. Due to the fact that previous years represent data as only image screenshots of spreadsheets, the data had to be manually transcribed into other comma-separated value spreadsheets. Although painstaking, we managed to extract rank, year, rounds played, and composite score from the entries from 2012-2018.
