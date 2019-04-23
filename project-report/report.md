@@ -50,7 +50,7 @@ To put the results into better interpration, there are various mathematical idea
 
 With the correlation coefficients of the graph, most of the relationships we found did not have much important, at least until the data was adjusted to better fit a linear model. This is what lead to the necessity of adjusting the graph for the Rank vs. Score and Rank vs. Rounds Won graphs. As a result, the correlation coefficients for the graphs can be found below:
 
-|TO BE ADDED, ADD IN AN IMAGE|
+!images/dt.svg)
 
 For the Gini coefficients of the data tree representation, it was found that at the root node that it was precisely 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that |TO BE ADDED.|
 ## Conclusion
