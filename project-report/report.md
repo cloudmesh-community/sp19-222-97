@@ -48,14 +48,13 @@ To put the results into better interpration, there are various mathematical idea
 
 The following table shows various other points of data, including the _R_ value as well.
 
-
-| Graph Type                     | Slope  | Intercept | R Value | R Squared | P Value | Standard Error |
-|--------------------------------|--------|-----------|---------|-----------|---------|----------------|
-| Rank vs. Year                  | 0.479  | -950.059  | 0.100   | 0.01      | 0.129   | 0.314          |
-| Rank vs. Score                 | -8.474 | 24.648    | -0.492  | 0.242064  | 1.495   | 9.88e-7        |
-| Rank vs. Rounds Won            |        |           |         |           |         |                |
-| Rank vs. Score - Adjusted      |        |           |         |           |         |                |
-| Rank vs. Rounds Won - Adjusted |        |           |         |           |         |                |
+| Graph Type                     | Slope    | Intercept | R Value   | R Squared     | P Value  | Standard Error |
+|--------------------------------|----------|-----------|-----------|---------------|----------|----------------|
+| Rank vs. Year                  | 0.479999 | -950.059  | 0.100040  | 0.010008      | 0.128674 | 0.128674       |
+| Rank vs. Score                 | -8.47387 | 24.6477   | -0.492092 | 0.242064      | 1.49504  | 0.000009       |
+| Rank vs. Rounds Won            | -6.92834 | 29.9115   | -0.896032 | 0.80287334502 | 4.60790  | 0.226367       |
+| Rank vs. Score - Adjusted      |          |           |           |               |          |                |
+| Rank vs. Rounds Won - Adjusted |          |           |           |               |          |                |
 
 * __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree.
 
