@@ -48,7 +48,7 @@ To put the results into better interpration, there are various mathematical idea
 
 The following table shows various other points of data, including the _R_ value as well.
 
-: Data Tree {#tbl:data-tree} 
+: Linear Regressor {#tbl:lin-reg} 
 
 | Graph Type          | Slope    | Intercept | R Value   | R Squared | P Value  | Standard Error |
 |---------------------|----------|-----------|-----------|-----------|----------|----------------|
@@ -60,14 +60,14 @@ The following table shows various other points of data, including the _R_ value 
 
 With the correlation coefficients of the graph, most of the relationships we found did not have much important, at least until the data was adjusted to better fit a linear model. This is what lead to the necessity of adjusting the graph for the Rank vs. Score and Rank vs. Rounds Won graphs. As a result, the correlation coefficients for the graphs can be found below:
 
-![Data Tree](images/dt.svg)
+![Data Tree](images/dt.svg){#fig:data-tree}
 
 For the Gini coefficients of the data tree representation, it was found that at the root node that it was precisely 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that the cost per each decision is rather high.
 ## Conclusion
 ---
-The deductions made from both of these experiments must be approached differently, since they are seperate models. According to the chart, we can see that the _R_ squared value for Rank vs. Year became 0.010008, for Rank vs. Score it was 0.242064, and for Rank vs. Rounds Won 0.802873. [@:data-tree]. This should come as no real suprise, since we expect that any person who won more rounds has a higher rank then the others who did not win. We know that from the rather low values comparatively for Score and Year that there does not seem to be a strong linear relationship between Rank vs. Year and Rank vs. Score.
+The deductions made from both of these experiments must be approached differently, since they are seperate models. According to the chart, we can see that the _R_ squared value for Rank vs. Year became 0.010008, for Rank vs. Score it was 0.242064, and for Rank vs. Rounds Won it was 0.802873. [@:lin-reg]. This should come as no real suprise, since we expect that any person who won more rounds has a higher rank then the others who did not win. We know that from the rather low values comparatively for Score and Year that there does not seem to be a strong linear relationship between Rank vs. Year and Rank vs. Score.
 
-As for the data tree model, it was discovered that |TO BE ADDED.|
+As for the data tree model, it was discovered that the Gini coefficients for the model were indeed closer to zero but that the data tree itself was heavily lopsided. [@:data-tree] This suggests that although their may be vague linear relationship when classifying the elements of the data tree, it has high cost for it's usage, meaning again it may not fit to be a very useful model. Then again, a lot of pruning of unnessecary leaves, mainly any branches whose Gini coefficients are already zero, could help this matter.
 ## Sources
 ---
 * http://news.bbc.co.uk/2/hi/health/7813637.stm
