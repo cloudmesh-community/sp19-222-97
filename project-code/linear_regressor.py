@@ -47,10 +47,10 @@ def linear_regression():
         scores.append(e[3])
         rounds.append(e[4])
 
-        plt.plot(rounds, scores, '.')
-        plt.yscale('linear')
-        plt.xscale('linear')
-        plt.show()
+        #plt.plot(rounds, scores, '.')
+        #plt.yscale('linear')
+        #plt.xscale('linear')
+        #plt.show()
 
         N = len(entries)
         n = len(entries[0])
@@ -67,6 +67,8 @@ def linear_regression():
 
         for k in range(1,4):
             plt.plot(data[:,k], data[:,0], 'b.')
+            lin_regress_stats = stats.linregress(data[:,k], data[:,0])
+            print(lin_regress_stats)
             plt.title(str(k));
             # plt.savefig("feature" + str(k) + ".png" , dpi=300)
             plt.show()
