@@ -52,7 +52,7 @@ With the correlation coefficients of the graph, most of the relationships we fou
 
 ![Data Tree](images/dt.svg)
 
-For the Gini coefficients of the data tree representation, it was found that at the root node that it was precisely 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that |TO BE ADDED.|
+For the Gini coefficients of the data tree representation, it was found that at the root node that it was precisely 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that the cost per each decision is rather high.
 ## Conclusion
 ---
 The deductions made from both of these experiments must be approached differently, since they are seperate models. For the linear regression model, it was discovered that |TO BE ADDED.|. As for the data tree model, it was discovered that |TO BE ADDED.|
