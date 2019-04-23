@@ -21,7 +21,7 @@ The primary design for this project comes in two stages:
 1) The creation of a regression model that most suitable fits the dataset. This should most likely be a linear regression model or a data tree.
 2) The creation of a RESTful server that could retrieve the raw data sets, perform analysis, and return the data to a requested user.
 
-The first part of the project required me to program a way to retrieve the transcribed data. By import the Python libraries csv and requests, the program can retrieve this data from a Google Drive downloadable link as TETRIS_DOWNLOAD.csv. This data set can be found [here.](https://drive.google.com/open?id=1ndBqB24w8OnpZmTZTU_Ey2iHdbgxDZgJeuYc66tzhTI) [@website:2]
+The first part of the project required me to program a way to retrieve the transcribed data. Due to the data on the website being only images of spreadsheets rather then the spreadsheets themselves, this was neccessary. [@website:2] By importing the Python libraries csv and requests, the program can retrieve this data from a Google Drive downloadable link as TETRIS_DOWNLOAD.csv. This data set can be found [here.](https://drive.google.com/open?id=1ndBqB24w8OnpZmTZTU_Ey2iHdbgxDZgJeuYc66tzhTI){#sec:tetris-data}
 
 The analysis of the data was first done with the usage of a linear regression model. For this, I took the features to be year, rounds won, and composite score. The label in question was the resulting ranking of players. The second model used was a data tree classifier. This would help with the previous linear regression model, since we can observe how the Gini coefficients - analytical resultants of data trees that help color the importance of certain variables - are resulted from the usage of a data tree. 
 
