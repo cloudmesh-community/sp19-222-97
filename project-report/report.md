@@ -48,7 +48,6 @@ To put the results into better interpration, there are various mathematical idea
 
 The following table shows various other points of data, including the _R_ value as well.
 
-![Table]
 | Graph Type          | Slope    | Intercept | R Value   | R Squared | P Value  | Standard Error |
 |---------------------|----------|-----------|-----------|-----------|----------|----------------|
 | Rank vs. Year       | 0.479999 | -950.059  | 0.100040  | 0.010008  | 0.128674 | 0.128674       |
