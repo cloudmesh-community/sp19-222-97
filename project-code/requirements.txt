@@ -6,7 +6,7 @@ flask
 io
 IPython.core.interactiveshell
 os
-request
+requests
 numpy
 matplotlib.pyplot
 scipy
