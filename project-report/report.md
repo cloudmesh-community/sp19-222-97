@@ -46,6 +46,9 @@ The data used within this project was primarily extrapolated from data of the wi
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
 * __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. 
+
+The following table shows various other points of data, including the _R_ value as well.
+
 * __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree.
 
 With the correlation coefficients of the graph, most of the relationships we found did not have much important, at least until the data was adjusted to better fit a linear model. This is what lead to the necessity of adjusting the graph for the Rank vs. Score and Rank vs. Rounds Won graphs. As a result, the correlation coefficients for the graphs can be found below:
