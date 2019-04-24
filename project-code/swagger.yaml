@@ -10,7 +10,7 @@ info:
     name: "Apache 2.0"
     url: "http:///www.apache.org/licenses/LICENSE-2.0"
 host: "localhost:8080"
-basePath: "/" # Fix this
+basePath: "/Tetris"
 schemes:
   - "http"
 consumes:
@@ -18,22 +18,58 @@ consumes:
 produces:
   - "application/json"
 paths:
-  /data/:
+  /lin_reg/download/<output>:
     get:
-      operationId: project-code.linear_regressor.read_csv
+      operationId: project-code.linear_regressor.download
       produces:
         - "application/json"
       responses:
-        "200"
+        "200":
+          description: "OK"
+          shema: {}
+
+  /lin_reg/read:
+    get:
+      operationId: project-code.linear_regressor.read_csv
+      produces:
+        - "application/txt"
+      responses:
+        "200":
           description: "OK"
           schema: {}
 
-  /data/:
+  /lin_reg/analyze:
     get:
       operationId: project-code.linear_regressor.linear_regression
       produces:
         - "application/png"
-      response:
-        "200"
-        description: "OK"
-        schema: {}
+      responses:
+        "200":
+          description: "OK"
+          schema: {}
+
+  /dt/download/<output>:
+    get:
+      operationId: project-code.data_tree.download
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "OK"
+          schema: {}
+
+
+  # Is a second read function really needed if it's the same?
+  # /dt/read:
+    # get:
+      # operationId: project-code.data_tree.read_csv
+
+  /dt/analyze:
+    get:
+      operationId: project-code.data_tree.data_tree
+      produces:
+        - "application/png"
+      responses:
+        "200":
+          description: "OK"
+          schema: {}

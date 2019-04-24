@@ -12,6 +12,7 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn import tree
 from sklearn import preprocessing
 from sklearn.externals.six import StringIO
+from project-code import code_dir
 
 url = 'https://drive.google.com/uc?export=download&id=1flTTzCX8aZOOX11CidgUvZcc_VrQTAi5'
 
@@ -21,9 +22,14 @@ def download_data(url, filename):
     open(filename, 'wb').write(r.content)
     return
 
-# download_data(url, './data/TETRIS_DOWNLOAD.csv')
+def download(output):
+    data_dir = code_dir + '/data'
+    out_file = data_dir + output
+    download_data(url_ex_2, out_file)
+    return str(output) + " downloaded to " + str(code_dir)
 
 # Source: https://realpython.com/python-csv/
+# Save as .txt
 def read_csv():
     with open('./data/TETRIS_DOWNLOAD.csv') as csv_file:
         # entries = []
@@ -40,8 +46,10 @@ def read_csv():
                 rowDict[headers[i]] = row[i]
         featureList.append(rowDict)
 
-        print(featureList)
+        #print(featureList)
+    return
 
+# Save as image
 def data_tree():
     # Vectorize features and print out features names
     vec = DictVectorizer()

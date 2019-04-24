@@ -10,7 +10,7 @@ app.add_api("swagger.yaml")
 # create a URL route in our application for "/"
 @app.route("/")
 def home():
-    msg = {"msg": "Hello World!"}
+    msg = {"msg": "Tetris Score Analyzer"}
     return jsonify(msg)
 
 if __name__ == "__main__":
