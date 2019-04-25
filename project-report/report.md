@@ -30,10 +30,7 @@ The primary design for this project comes in two stages:
 1. The creation of a regression model that most suitable fits the dataset. This should most likely be a linear regression model or a data tree.
 2. The creation of a RESTful server that could retrieve the raw data sets, perform analysis, and return the data to a requested user.
 
-:wave: numbered list syntax 
-
 The first part of the project required me to program a way to retrieve the transcribed data. Due to the data on the website being only images of spreadsheets rather then the spreadsheets themselves, this was neccessary [@website:2]. By importing the Python libraries csv and requests, the program can retrieve this data from a Google Drive downloadable link as TETRIS_DOWNLOAD.csv. 
-
 
 By using a decision tree and a linear regression model, we can better understand which relationships between variables are meaningful and which are not. The analysis of the data was first done with the usage of a linear regression model. For this, I took the features to be year, rounds won, and composite score. The label in question was the resulting ranking of players. The second model used was a data tree classifier. This would help with the previous linear regression model, since we can observe how the Gini coefficients - numbers that represent the inequality distribution of data tree nodes that help color the importance of certain variables - are resulted from the usage of a decision tree. Gini coefficients are assigned to each branch and leaf of a decision tree and evaluate the decision inequality when evaluating whether an entry is one or another. If the nodes expectedly go to zero, it is a positve indicator that the model fits well.
 
@@ -41,11 +38,9 @@ By using a decision tree and a linear regression model, we can better understand
 ---
 There are two primary structures within this experiment. The first is the linear regression model located within linear_regressor.py and data_tree.py. The first Python module retrieves data from a Google Drive link and downloads it locally. Using a REST service, it can send over results of analysis on the data set. It gives three distinct graphs, divided into subplots on a single image. 
 
-:wave: see above ordered list syntax 
-
-1) Rank vs. Year
-2) Rank vs. Score
-3) Rank vs. Rounds Won
+1. Rank vs. Year
+2. Rank vs. Score
+3. Rank vs. Rounds Won
 
 As for the second module, data_tree.py, it will simply read the data and create a .dot chart from the results, which can be saved remotely just like the graphs within linear_regressor.py. The Python library graphviz makes for easy use of creating the decision tree to reflect the data used within this experiment.
 
