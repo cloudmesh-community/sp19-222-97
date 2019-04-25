@@ -12,7 +12,7 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn import tree
 from sklearn import preprocessing
 from sklearn.externals.six import StringIO
-from project-code import code_dir
+from __init__ import code_dir
 
 url = 'https://drive.google.com/uc?export=download&id=1flTTzCX8aZOOX11CidgUvZcc_VrQTAi5'
 
@@ -47,10 +47,15 @@ def read_csv():
         featureList.append(rowDict)
 
         #print(featureList)
-    return
+    return featureList, labelList
 
 # Save as image
 def data_tree():
+    featureList = []
+    labelList = []
+
+    featureList, labelList = read_csv()
+
     # Vectorize features and print out features names
     vec = DictVectorizer()
     X = vec.fit_transform(featureList).toarray()
@@ -68,6 +73,6 @@ def data_tree():
     clf.fit(X, Y)
     print("clf: " + str(clf))
 
-    dot_data = tree.export_graphviz(clf, out_file = None, feature_names=vec.get_feature_names())
+    dot_data = tree.export_graphviz(clf, out_file = './output/DT_GRAPH.png', feature_names=vec.get_feature_names())
     graph = graphviz.Source(dot_data)
-    graph
+    # graph.render(filename='./output/DT_GRAPH.png')
