@@ -77,7 +77,7 @@ The following table shows various points of data found based on the graphs.
 | Rank vs. Score      | -8.47387 | 24.6477   | -0.492092 | 0.242064  | 1.49504  | 0.000009       |
 | Rank vs. Rounds Won | -6.92834 | 29.9115   | -0.896032 | 0.802873  | 4.60790  | 0.226367       |
 
-With the correlation coefficients of the graph, most of the relationships we found did not have much importance. As we can tell, the _R_ value of Rank vs. Year was closer to zero, indicating that there is not any strength in a linear relationship with the two statistics. In the 
+With the correlation coefficients of the graph, most of the relationships we found did not have much importance. As we can tell, the _R_ value of Rank vs. Year was closer to zero, indicating that there is not any strength in a linear relationship with the two statistics. In the Rank vs. Score graph it indicates a middle-leve of strength with _R_ = -0.492092. This suggests a negative linear relationship that isn't so strong, but it is expected since ranks are actually lower in number, meaning 1st place is actually the highest, but 32nd place has a higher number. That is why when discussing them we look at the _R^2_ value instead, which is positive. This carries over when discussing with Rank vs. Rounds Won, as _R_ = -0.896032. As expected, a person with a higher rank has won more rounds, so this is as expected.
 
 Moving on, we can discuss the other model used, the decision tree. The decision tree helps us understand the actual meaning of any relationships between variables and whether or not they are of any real importance. The primary way that we evaluate this is by using the following:
 
