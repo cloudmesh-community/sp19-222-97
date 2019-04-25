@@ -34,15 +34,11 @@ The primary design for this project comes in two stages:
 
 :wave: numbered list syntax 
 
-The first part of the project required me to program a way to retrieve the transcribed data. Due to the data on the website being only images of spreadsheets rather then the spreadsheets themselves, this was neccessary. [@website:2] By importing the Python libraries csv and requests, the program can retrieve this data from a Google Drive downloadable link as TETRIS_DOWNLOAD.csv. This data set can be found [here.](https://drive.google.com/open?id=1ndBqB24w8OnpZmTZTU_Ey2iHdbgxDZgJeuYc66tzhTI){#sec:tetris-data}
+The first part of the project required me to program a way to retrieve the transcribed data. Due to the data on the website being only images of spreadsheets rather then the spreadsheets themselves, this was neccessary. [@website:2] By importing the Python libraries csv and requests, the program can retrieve this data from a Google Drive downloadable link as TETRIS_DOWNLOAD.csv. 
 
-:wave: I dont need a link to your data in the report. 
+The analysis of the data was first done with the usage of a linear regression model. For this, I took the features to be year, rounds won, and composite score. The label in question was the resulting ranking of players. The second model used was a data tree classifier. This would help with the previous linear regression model, since we can observe how the Gini coefficients - numbers that represent the inequality distribution of data tree nodes that help color the importance of certain variables - are resulted from the usage of a decision tree. Gini coefficients are assigned to each 
 
-The analysis of the data was first done with the usage of a linear regression model. For this, I took the features to be year, rounds won, and composite score. The label in question was the resulting ranking of players. The second model used was a data tree classifier. This would help with the previous linear regression model, since we can observe how the Gini coefficients - analytical resultants of data trees that help color the importance of certain variables - are resulted from the usage of a data tree. 
-
-:wave: add substance to the above paragraph, what are gini coefficients, what are analytical resultants be specific and elaborate. 
-
-By using a data tree node to evaluate linear regression models, we can better understand which relationships between variables are meaningful and which are not.
+By using a data tree node to evaluate linear regression models, we can better understand which relationships between variables are meaningful and which are not. T
 
 :wave: how exactly does a data tree do this?
 
@@ -68,17 +64,16 @@ As for the second module, data_tree.py, it will simply read the data and create 
 
 ## Dataset
 ---
-The data used within this project was primarily extrapolated from data of the winner results from the Tetris World Championships. Due to the fact that previous years represent data as only image screenshots of spreadsheets, the data had to be manually transcribed into other comma-separated value spreadsheets. Although painstaking, we managed to extract rank, year, rounds played, and composite score from the entries from 2012-2018.
-
-:wave: did you extrapolate your data? if so why and how? 
+The data used within this project was primarily extrapolated from data of the winner results from the Tetris World Championships. Due to the fact that previous years represent data as only image screenshots of spreadsheets, the data had to be manually transcribed into other comma-separated value spreadsheets. The data was extrapolated from the spreadsheets into a Google Spreadsheet and saved into a comma-sepearted value file. Extrapolated entries included a player's name, composite score, rank, rounds won, and the year the game took place.
 
 ## Results
 ---
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
-* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. 
+* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as the 
+* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. SITE THIS.
 
-The following table shows various other points of data, including the _R_ value as well.
+The following table shows various other points of data, including the _R_ and _R^2_ values as well.
 
 : Linear Regressor {#tbl:lin-reg} 
 
@@ -88,7 +83,9 @@ The following table shows various other points of data, including the _R_ value 
 | Rank vs. Score      | -8.47387 | 24.6477   | -0.492092 | 0.242064  | 1.49504  | 0.000009       |
 | Rank vs. Rounds Won | -6.92834 | 29.9115   | -0.896032 | 0.802873  | 4.60790  | 0.226367       |
 
-* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree.
+
+
+* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree. {}
 
 :wave: why do we expect them to be close to zero? explicity state why and provide a resource as to why.
 
