@@ -6,12 +6,12 @@ docker-all: docker-build docker-start
 
 docker-build:
 	@echo "Building image from docker file..."
-	docker build -t /filepath/ .
+	docker build --no-cache --pull -t zwlevy/tetris .
 	@echo "Image done..."
 
 docker-start:
 	@echo "Starting new service in container..."
-	docker run -v /home/:home/ -p 8080:8080 /filepath/
+	docker run -v /home/:home/ -p 8080:8080 zwlevy/tetris
 
 service:
 	@echo "Creating service..."
@@ -31,7 +31,7 @@ docker-stop:
 
 docker-remove:
 	@echo "Removing image..."
-	docker rmi -f /filepath/
+	docker rmi -f zwlevy/tetris
 	@echo "Image has been removed."
 
 docker-clean: docker-stop docker-remove
