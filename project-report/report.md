@@ -68,11 +68,15 @@ The data used within this project was primarily extrapolated from data of the wi
 ---
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
-* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as follows: ![Correlation_Coefficient](images/CC.png){#fig:CC-img}
+* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as follows: 
 
-* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. _R^2_ is calculated as follows: SITE THIS.
+![Correlation_Coefficient](images/CC.png){#fig:CC-img}
 
-The following table shows various other points of data, including the _R_ and _R^2_ values as well.
+* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. _R^2_ is calculated as follows: 
+
+![Determination Coefficient](images/CR.png){#fig:CR-img}
+
+The following table shows various points of data found based on the graphs.
 
 : Linear Regressor {#tbl:lin-reg} 
 
@@ -82,13 +86,12 @@ The following table shows various other points of data, including the _R_ and _R
 | Rank vs. Score      | -8.47387 | 24.6477   | -0.492092 | 0.242064  | 1.49504  | 0.000009       |
 | Rank vs. Rounds Won | -6.92834 | 29.9115   | -0.896032 | 0.802873  | 4.60790  | 0.226367       |
 
+With the correlation coefficients of the graph, most of the relationships we found did not have much importance. EXPAND THIS SECTION.
 
 
 * __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree. {}
 
 :wave: why do we expect them to be close to zero? explicity state why and provide a resource as to why.
-
-With the correlation coefficients of the graph, most of the relationships we found did not have much importance, at least until the data was adjusted to better fit a linear model. This is what lead to the necessity of adjusting the graph for the Rank vs. Score and Rank vs. Rounds Won graphs. As a result, the correlation coefficients for the graphs can be found below:
 
 ![Data Tree](images/dt.svg){#fig:data-tree}
 
