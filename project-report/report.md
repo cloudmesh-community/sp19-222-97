@@ -70,8 +70,8 @@ The data used within this project was primarily extrapolated from data of the wi
 ---
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
-* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as the 
-* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. SITE THIS.
+* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as follows:
+* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. _R^2_ is calculated as follows: SITE THIS.
 
 The following table shows various other points of data, including the _R_ and _R^2_ values as well.
 
@@ -100,8 +100,6 @@ For the Gini coefficients of the data tree representation, it was found that at 
 :wave: overal the content in this section is good however a few resources would help streghten this. Additionally you can get in the weeds a bit more about what these values represent and mean. You can even use equations and math to help describe. 
 
 :wave: how is R calcualted or what is it? 
-
-:wave: '* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree.' Is this intentional ? Be careful with formatting to avoid unwanted results. 
 
 ## Conclusion
 ---
