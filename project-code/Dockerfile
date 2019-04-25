@@ -28,6 +28,4 @@ WORKDIR tetris/
 
 EXPOSE 8080
 
-RUN make start
-
 CMD ["make", "start"]
