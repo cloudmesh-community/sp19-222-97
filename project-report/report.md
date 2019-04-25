@@ -36,15 +36,13 @@ By using a decision tree and a linear regression model, we can better understand
 
 ## Architecture
 ---
-There are two primary structures within this experiment. The first is the linear regression model located within linear_regressor.py and data_tree.py. The first Python module retrieves data from a Google Drive link and downloads it locally. Using a REST service, it can send over results of analysis on the data set. It gives three distinct graphs, divided into subplots on a single image. 
+There are two primary structures within this experiment. The first is the linear regression model module. This module can retrieve data from a Google Drive link and downloads it locally. Using a REST service, it can send over results of analysis on the data set. The scipy library makes it very simple to perform linear regression. It gives three distinct graphs - divided into subplots on a single image - and uses matplotlib to make graphs that are easily human-readable.
 
 1. Rank vs. Year
 2. Rank vs. Score
 3. Rank vs. Rounds Won
 
-As for the second module, data_tree.py, it will simply read the data and create a .dot chart from the results, which can be saved remotely just like the graphs within linear_regressor.py. The Python library graphviz makes for easy use of creating the decision tree to reflect the data used within this experiment.
-
-:wave: your do not need you python file names in this report, instead discuss libraries you used and how you moduliazed your code and created your own python modules. 
+As for the data tree module it will simply read the data the same way as the linear regression module and create a .dot chart from the results, which can be saved remotely just like the graphs within the linear regression module. The Python library graphviz makes for easy use of creating the decision tree to reflect the data used within this experiment, while libraries such as csv, io, os and requests allow the modules to download and read the extrapolated data with ease. 
 
 ## Dataset
 ---
