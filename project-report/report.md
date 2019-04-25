@@ -80,8 +80,6 @@ Moving on, we can discuss the other model used, the decision tree. The decision 
 
 ![Data Tree](images/dt.svg){#fig:data-tree}
 
-:wave: this figure is so big it doesn't really have a place here, maybe a table or a smaller portion would be better.
-
 For the Gini coefficients of the data tree representation, it was found that at the root node that it was precisely 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that the cost per each decision is rather high [@lecture:2].
 
 ## Conclusion
