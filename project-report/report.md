@@ -110,17 +110,8 @@ For the Gini coefficients of the data tree representation, it was found that at 
 ---
 The deductions made from both of these experiments must be approached differently, since they are seperate models. According to the chart, we can see that the _R_ squared value for Rank vs. Year became 0.010008, for Rank vs. Score it was 0.242064, and for Rank vs. Rounds Won it was 0.802873. [@tbl:lin-reg]. This should come as no real suprise, since we expect that any person who won more rounds has a higher rank then the others who did not win. We know that from the rather low values comparatively for Score and Year that there does not seem to be a strong linear relationship between Rank vs. Year and Rank vs. Score.
 
-As for the data tree model, it was discovered that the Gini coefficients for the model were indeed closer to zero but that the data tree itself was heavily lopsided. [@fig:data-tree] This suggests that although their may be vague linear relationship when classifying the elements of the data tree, it has high cost for it's usage, meaning again it may not fit to be a very useful model. The Gini coefficient at the first branch was 0.238, and the Gini coefficient at the last one was 0.37. Pruning of unnessecary leaves, mainly any branches whose Gini coefficients are already zero, could help this matter.
+As for the data tree model, it was discovered that the Gini coefficients for the model were indeed closer to zero but that the data tree itself was heavily lopsided [@fig:data-tree]. This suggests that although their may be vague linear relationship when classifying the elements of the data tree, it has high cost for it's usage, meaning again it may not fit to be a very useful model. The Gini coefficient at the first branch was 0.238, and the Gini coefficient at the last one was 0.37. Pruning of unnessecary leaves, mainly any branches whose Gini coefficients are already zero, could help this matter.
 
 :wave:  avoid jargon like this 'meaning again it'
 
 :wave: find some resources on gini coeeficents and give a discission about them as you use them throughout this paper. 
-
-
-## Sources
----
-* http://news.bbc.co.uk/2/hi/health/7813637.stm
-* https://science.sciencemag.org/content/290/5490/350
-* https://thectwc.com/results/
-
-:wave: sources need to go in .bib and proper bibtex format must be used. 
