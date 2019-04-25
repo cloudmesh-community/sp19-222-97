@@ -32,31 +32,22 @@ The primary design for this project comes in two stages:
 
 :wave: numbered list syntax 
 
-The first part of the project required me to program a way to retrieve the transcribed data. Due to the data on the website being only images of spreadsheets rather then the spreadsheets themselves, this was neccessary. [@website:2] By importing the Python libraries csv and requests, the program can retrieve this data from a Google Drive downloadable link as TETRIS_DOWNLOAD.csv. 
+The first part of the project required me to program a way to retrieve the transcribed data. Due to the data on the website being only images of spreadsheets rather then the spreadsheets themselves, this was neccessary [@website:2]. By importing the Python libraries csv and requests, the program can retrieve this data from a Google Drive downloadable link as TETRIS_DOWNLOAD.csv. 
 
-The analysis of the data was first done with the usage of a linear regression model. For this, I took the features to be year, rounds won, and composite score. The label in question was the resulting ranking of players. The second model used was a data tree classifier. This would help with the previous linear regression model, since we can observe how the Gini coefficients - numbers that represent the inequality distribution of data tree nodes that help color the importance of certain variables - are resulted from the usage of a decision tree. Gini coefficients are assigned to each 
 
-By using a data tree node to evaluate linear regression models, we can better understand which relationships between variables are meaningful and which are not.
-
-:wave: how exactly does a data tree do this?
+By using a decision tree and a linear regression model, we can better understand which relationships between variables are meaningful and which are not. The analysis of the data was first done with the usage of a linear regression model. For this, I took the features to be year, rounds won, and composite score. The label in question was the resulting ranking of players. The second model used was a data tree classifier. This would help with the previous linear regression model, since we can observe how the Gini coefficients - numbers that represent the inequality distribution of data tree nodes that help color the importance of certain variables - are resulted from the usage of a decision tree. Gini coefficients are assigned to each branch and leaf of a decision tree and evaluate the decision inequality when evaluating whether an entry is one or another. If the nodes expectedly go to zero, it is a positve indicator that the model fits well.
 
 ## Architecture
 ---
-There are two primary structures within this experiment. The first is the linear regression model located within linear_regressor.py and data_tree.py. The first Python module retrieves data from the google drive link and downloads it locally, given the API implementation, can send over results of analysis on the data set. It gives five distinct graphs. 
-
-:wave: re work this sentence I don't follow it. '...given the API implementation, can send over results of analysis on the data set. '
+There are two primary structures within this experiment. The first is the linear regression model located within linear_regressor.py and data_tree.py. The first Python module retrieves data from a Google Drive link and downloads it locally. Using a REST service, it can send over results of analysis on the data set. It gives three distinct graphs, divided into subplots on a single image. 
 
 :wave: see above ordered list syntax 
 
 1) Rank vs. Year
 2) Rank vs. Score
 3) Rank vs. Rounds Won
-4) Rank vs. Score - Adjusted 
-5) Rank vs. Rounds Won - Adjusted
 
-As for the second module, data_tree.py, it will simply read the data and create a .dot chart from the results, which can be saved remotely just like the graphs within linear_regressor.py. Luckily, the handy Python library graphviz makes for easy use of creating the data tree to reflect the data used within this experiment.
-
-:wave: avoid phrases like this 'Luckily, the handy Python '
+As for the second module, data_tree.py, it will simply read the data and create a .dot chart from the results, which can be saved remotely just like the graphs within linear_regressor.py. The Python library graphviz makes for easy use of creating the decision tree to reflect the data used within this experiment.
 
 :wave: your do not need you python file names in this report, instead discuss libraries you used and how you moduliazed your code and created your own python modules. 
 
@@ -68,11 +59,11 @@ The data used within this project was primarily extrapolated from data of the wi
 ---
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
-* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as follows: 
+* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. If _R_ is close to -1, then a strong negative linear relationship exists. Likewise a +1 indicates a strong positive linear relationship. However, if _R_ is closer to zero, then it indicates that a linear relationship isn't very present [@website:3]. _R_ is calculated as follows: 
 
 ![Correlation_Coefficient](images/CC.png){#fig:CC-img}
 
-* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. _R^2_ is calculated as follows: 
+* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. The closer this value is to one, the better. An _R^2_ that is less then zero indicates that it is a poorly fit model, and the reason this is such is that we have used bad constraints or a made poor choice in model [@lecture:1]. _R^2_ is calculated as follows: 
 
 ![Determination Coefficient](images/CR.png){#fig:CR-img}
 
@@ -86,29 +77,23 @@ The following table shows various points of data found based on the graphs.
 | Rank vs. Score      | -8.47387 | 24.6477   | -0.492092 | 0.242064  | 1.49504  | 0.000009       |
 | Rank vs. Rounds Won | -6.92834 | 29.9115   | -0.896032 | 0.802873  | 4.60790  | 0.226367       |
 
-With the correlation coefficients of the graph, most of the relationships we found did not have much importance. EXPAND THIS SECTION.
+With the correlation coefficients of the graph, most of the relationships we found did not have much importance. As we can tell, the 
 
 
-* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree. {}
+* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree [@lecture:2].
 
-:wave: why do we expect them to be close to zero? explicity state why and provide a resource as to why.
 
 ![Data Tree](images/dt.svg){#fig:data-tree}
 
 :wave: this figure is so big it doesn't really have a place here, maybe a table or a smaller portion would be better.
 
-For the Gini coefficients of the data tree representation, it was found that at the root node that it was precisely 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that the cost per each decision is rather high.
+For the Gini coefficients of the data tree representation, it was found that at the root node that it was precisely 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that the cost per each decision is rather high [@lecture:2].
 
 :wave: overal the content in this section is good however a few resources would help streghten this. Additionally you can get in the weeds a bit more about what these values represent and mean. You can even use equations and math to help describe. 
-
-:wave: how is R calcualted or what is it? 
 
 ## Conclusion
 ---
 The deductions made from both of these experiments must be approached differently, since they are seperate models. According to the chart, we can see that the _R_ squared value for Rank vs. Year became 0.010008, for Rank vs. Score it was 0.242064, and for Rank vs. Rounds Won it was 0.802873. [@tbl:lin-reg]. This should come as no real suprise, since we expect that any person who won more rounds has a higher rank then the others who did not win. We know that from the rather low values comparatively for Score and Year that there does not seem to be a strong linear relationship between Rank vs. Year and Rank vs. Score.
 
-As for the data tree model, it was discovered that the Gini coefficients for the model were indeed closer to zero but that the data tree itself was heavily lopsided [@fig:data-tree]. This suggests that although their may be vague linear relationship when classifying the elements of the data tree, it has high cost for it's usage, meaning again it may not fit to be a very useful model. The Gini coefficient at the first branch was 0.238, and the Gini coefficient at the last one was 0.37. Pruning of unnessecary leaves, mainly any branches whose Gini coefficients are already zero, could help this matter.
+As for the data tree model, it was discovered that the Gini coefficients for the model were indeed closer to zero but that the data tree itself was heavily lopsided [@fig:data-tree]. This suggests that although their may be vague linear relationship when classifying the elements of the data tree, it has high cost for it's usage, suggesting it may not fit to be a very useful model. The Gini coefficient at the first branch was 0.238, and the Gini coefficient at the last one was 0.37. Pruning of unnessecary leaves, mainly any branches whose Gini coefficients are already zero, could help this matter [@lecture:2].
 
-:wave:  avoid jargon like this 'meaning again it'
-
-:wave: find some resources on gini coeeficents and give a discission about them as you use them throughout this paper. 
