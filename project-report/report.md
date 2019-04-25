@@ -21,9 +21,7 @@ Released originally on the Electronika 60 in the USSR on June 6, 1984, Tetris ha
 
 Although deviations have spawned from the game, the primary rules of Tetris are rather simple. Blocks, arranged into sequences of four called tetrominoes, move vertically from top to bottom. The player can reposition and reorient the blocks, and the goal is to get a set of blocks all on a bottom line, in which the blocks will disappear and add to the score. After many of these occur, the game will speed up, making it harder to arrange blocks correctly. The game is over when the blocks reach to top of the screen.
 
-:wave: are these seperaste paragraphs?
-
-Tetris is one of the most widely renowned video games of our time. Ported to a wide variety of platforms, it has become a part of popular video game culture and has sold millions of copies. Psychological studies done on people who play the game have lead to the discovery that people who play for prolonged periods of time may see mild remote memories of the images of the tetrominoes moving [@article:1]. Additionally, some studies suggest that Tetris may help reduce mental stress and help individuals cope with post-traumatic stress disorder [@website:1]. 
+Ported to a wide variety of platforms, Tetris has become a part of popular video game culture and has sold millions of copies. Psychological studies done on people who play the game have lead to the discovery that people who play for prolonged periods of time may see mild remote memories of the images of the tetrominoes moving [@article:1]. Additionally, some studies suggest that Tetris may help reduce mental stress and help individuals cope with post-traumatic stress disorder [@website:1]. 
 
 ## Design
 ---
@@ -38,7 +36,7 @@ The first part of the project required me to program a way to retrieve the trans
 
 The analysis of the data was first done with the usage of a linear regression model. For this, I took the features to be year, rounds won, and composite score. The label in question was the resulting ranking of players. The second model used was a data tree classifier. This would help with the previous linear regression model, since we can observe how the Gini coefficients - numbers that represent the inequality distribution of data tree nodes that help color the importance of certain variables - are resulted from the usage of a decision tree. Gini coefficients are assigned to each 
 
-By using a data tree node to evaluate linear regression models, we can better understand which relationships between variables are meaningful and which are not. T
+By using a data tree node to evaluate linear regression models, we can better understand which relationships between variables are meaningful and which are not.
 
 :wave: how exactly does a data tree do this?
 
@@ -70,7 +68,8 @@ The data used within this project was primarily extrapolated from data of the wi
 ---
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
-* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as follows:
+* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. _R_ is calculated as follows: ![Correlation_Coefficient](images/CC.png){#fig:CC-img}
+
 * __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. _R^2_ is calculated as follows: SITE THIS.
 
 The following table shows various other points of data, including the _R_ and _R^2_ values as well.
