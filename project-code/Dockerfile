@@ -29,5 +29,3 @@ WORKDIR tetris/
 EXPOSE 8080
 
 CMD ["make", "start"]
-
---no-cache --pull
