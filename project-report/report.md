@@ -78,7 +78,7 @@ With the correlation coefficients of the graph, most of the relationships we fou
 
 Moving on, we can discuss the other model used, the decision tree. The decision tree helps us understand the actual meaning of any relationships between variables and whether or not they are of any real importance. The primary way that we evaluate this is by using the following:
 
-* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree [@lecture:2]. _Gini_ is calculated as follows: 
+* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree [@lecture:2]. _Gini_ is calculated as follows: $Gini = 1 - \sum_{k=1}^{n}p{}^{2}k$
 
 Here is a graph that represents the decision tree found within the experiment.
 
