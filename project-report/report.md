@@ -52,6 +52,8 @@ The data used within this project was primarily extrapolated from data of the wi
 ---
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
+$r=\frac{\sum((x-\bar{x})(y-\bar{y})}{\sum(x)}
+
 * __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. If _R_ is close to -1, then a strong negative linear relationship exists. Likewise a +1 indicates a strong positive linear relationship. However, if _R_ is closer to zero, then it indicates that a linear relationship isn't very present [@website:3]. _R_ is calculated as follows: 
 
 ![Correlation_Coefficient](images/CC.png){#fig:CC-img}
