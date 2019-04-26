@@ -60,11 +60,9 @@ The data used within this project was primarily extrapolated from data of the wi
 
 To put the results into better interpration, there are various mathematical ideas that can help explain the actual importance or usefulness of relationships shown. Most importantly when it comes to our experiment is the following for linear regression models and data trees.
 
-* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. If _R_ is close to -1, then a strong negative linear relationship exists. Likewise a +1 indicates a strong positive linear relationship. However, if _R_ is closer to zero, then it indicates that a linear relationship isn't very present [@website:3]. _R_ is calculated as follows: $r=\frac{\sum((x-\bar{x})(y-\bar{y})}{\sum(x-\bar{x})^2 \sum(y-\bar{y})^2}$
+* __Correlation Coefficient.__ Denoted by _R_, a correlation coefficient measures the strength of linear relationships of a scatter plot. If _R_ is close to -1, then a strong negative linear relationship exists. Likewise a +1 indicates a strong positive linear relationship. However, if _R_ is closer to zero, then it indicates that a linear relationship isn't very present [@website:3]. _R_ is calculated as follows: $R=\frac{\sum((x-\bar{x})(y-\bar{y})}{\sum(x-\bar{x})^2 \sum(y-\bar{y})^2}$
 
-* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. The closer this value is to one, the better. An _R^2_ that is less then zero indicates that it is a poorly fit model, and the reason this is such is that we have used bad constraints or a made poor choice in model [@lecture:1]. _R^2_ is calculated as follows: 
-
-![Determination Coefficient](images/CR.png){#fig:CR-img}
+* __Determination Coefficient.__ Denoted by _R^2_, the coefficient of determination how much variation of data has been explained by the model. The closer this value is to one, the better. An _R^2_ that is less then zero indicates that it is a poorly fit model, and the reason this is such is that we have used bad constraints or a made poor choice in model [@lecture:1]. _R^2_ is calculated as follows: $R^2=1-\frac{SS_{Res}}{SS_{Total}}$
 
 The following table shows various points of data found based on the graphs.
 
@@ -80,7 +78,9 @@ With the correlation coefficients of the graph, most of the relationships we fou
 
 Moving on, we can discuss the other model used, the decision tree. The decision tree helps us understand the actual meaning of any relationships between variables and whether or not they are of any real importance. The primary way that we evaluate this is by using the following:
 
-* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree [@lecture:2]. _Gini_ is calculated as follows:
+* __Gini Coefficient.__ Denoted by it's name, _Gini_, Gini coefficients are used with decision tree algorithms to measure the effectiveness of branches in a data tree. In a good model, we expect these to be closer to zero towards the leaves of a data tree [@lecture:2]. _Gini_ is calculated as follows: 
+
+Here is a graph that represents the decision tree found within the experiment.
 
 ![Data Tree](images/dt.svg){#fig:data-tree}
 
