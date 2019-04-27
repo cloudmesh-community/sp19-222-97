@@ -1,9 +1,4 @@
 :warning: in review 
-
-:wave: Overall I would like a more robust discussuon about the results, you inroduce several terms but do not describe what they mean in detail or dicuss how they are calcualted. 
-
-:wave: See math equation for correlation coef and you can see how is is rendered in the epub here <https://github.com/cloudmesh-community/proceedings/blob/master/vonLaszewski-222-sp19.epub>
-
 # Tetris Score Analysis Server
 
 | Zach Levy
