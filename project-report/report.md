@@ -8,6 +8,8 @@
 
 :wave: in addition to Figure 4, is there a different way that you can display that information? Its pretty much unreadable, 
 
+:o: basepath in yaml file not in cloudmesh domain, should be also lower case e.g. /cloudmesh/ai/tetris
+
 | Zach Levy
 | zwlevy@iu.edu
 | Indiana University
