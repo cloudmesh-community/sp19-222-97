@@ -106,3 +106,82 @@ The deductions made from both of these experiments must be approached differentl
 
 As for the data tree model, it was discovered that the Gini coefficients for the model were indeed closer to zero but that the data tree itself was heavily lopsided [@fig:data-tree]. This suggests that although their may be vague linear relationship when classifying the elements of the data tree, it has high cost for it's usage, suggesting it may not fit to be a very useful model. The Gini coefficient at the first branch was 0.238, and the Gini coefficient at the last one was 0.37. Pruning of unnessecary leaves, mainly any branches whose Gini coefficients are already zero, could help this matter [@lecture:2].
 
+## Spesification
+
+```
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  description: "Analyzes Tetris games from the Tetris World Championships"
+  termsOfService: "http://swagger.io.terms"
+  contact:
+    name: "Tetris Score Analyzer"
+    email: "zwlevy@iu.edu"
+  license:
+    name: "Apache 2.0"
+    url: "http:///www.apache.org/licenses/LICENSE-2.0"
+host: "localhost:8080"
+basePath: "/Tetris"
+schemes:
+  - "http"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+paths:
+  /lin_reg/download/<output>:
+    get:
+      operationId: project-code.linear_regressor.download
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "OK"
+          shema: {}
+
+  /lin_reg/read:
+    get:
+      operationId: project-code.linear_regressor.read_csv
+      produces:
+        - "application/txt"
+      responses:
+        "200":
+          description: "OK"
+          schema: {}
+
+  /lin_reg/analyze:
+    get:
+      operationId: project-code.linear_regressor.linear_regression
+      produces:
+        - "application/png"
+      responses:
+        "200":
+          description: "OK"
+          schema: {}
+
+  /dt/download/<output>:
+    get:
+      operationId: project-code.data_tree.download
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "OK"
+          schema: {}
+
+
+  # Is a second read function really needed if it's the same?
+  # /dt/read:
+    # get:
+      # operationId: project-code.data_tree.read_csv
+
+  /dt/analyze:
+    get:
+      operationId: project-code.data_tree.data_tree
+      produces:
+        - "application/png"
+      responses:
+        "200":
+          description: "OK"
+          schema: {}
+```
