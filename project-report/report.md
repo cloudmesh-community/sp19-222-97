@@ -1,8 +1,9 @@
+# Tetris Score Analysis Server
+
 :warning: in review 
 
 :wave: spaces between a new paragraph imply a new section/subsection combine paragraphs ore make sub sections with ###
 
-# Tetris Score Analysis Server
 
 | Zach Levy
 | zwlevy@iu.edu
