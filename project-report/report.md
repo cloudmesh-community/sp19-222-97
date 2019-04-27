@@ -1,6 +1,6 @@
 :warning: in review 
 
-:wave: spaces between a new paragraph impy a new section/subsection combine paragraphs ore make sub sections with ###
+:wave: spaces between a new paragraph imply a new section/subsection combine paragraphs ore make sub sections with ###
 
 # Tetris Score Analysis Server
 
