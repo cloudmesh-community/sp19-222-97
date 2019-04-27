@@ -4,8 +4,6 @@
 
 :wave: spaces between a new paragraph imply a new section/subsection combine paragraphs ore make sub sections with ###
 
-:wave: please review the conventions for rounding in a math book. 2 or 3 seems useful, but not all digits like you did
-
 :wave: in addition to Figure 4, is there a different way that you can display that information? Its pretty much unreadable, 
 
 :o: basepath in yaml file not in cloudmesh domain, should be also lower case e.g. /cloudmesh/ai/tetris
