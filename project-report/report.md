@@ -4,12 +4,13 @@
 
 :wave: spaces between a new paragraph imply a new section/subsection combine paragraphs ore make sub sections with ###
 
+:wave: please review the conventions for rounding in a math book. 2 or 3 seems useful, but not all digits like you did
 
 | Zach Levy
 | zwlevy@iu.edu
 | Indiana University
 | hid: sp19-222-97
-| github:[:cloud:](https://github.com/cloudmesh-community/sp19-222-97)
+| github:[:cloud:](https://github.com/cloudmesh-community/sp19-222-97/blob/master/project-report/report.md)
 | code:[:cloud:](https://github.com/cloudmesh-community/sp19-222-97/tree/master/project-code)
 
 ---
