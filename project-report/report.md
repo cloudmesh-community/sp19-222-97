@@ -15,7 +15,7 @@
 
 ---
 
-Keywords: Tetris, regression, add some more
+Keywords: Tetris, linear regression, decision tree, gini coefficient, correlation coefficient, determination coefficient, Python
 
 ---
 
