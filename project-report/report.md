@@ -115,7 +115,7 @@ info:
     name: "Apache 2.0"
     url: "http:///www.apache.org/licenses/LICENSE-2.0"
 host: "localhost:8080"
-basePath: "/Tetris"
+basePath: "cloudmesh/ai/tetris"
 schemes:
   - "http"
 consumes:
