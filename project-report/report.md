@@ -82,7 +82,7 @@ _Gini_ is calculated as follows: $Gini = 1 - \sum_{k=1}^{n}p{}^{2}k$
 
 Here is a graph that represents the decision tree found within the experiment.
 
-![Data Tree](images/dt_50.svg){#fig:data-tree}
+![A more readable image can be found at https://i.imgur.com/mLXv6sU.png](https://i.imgur.com/mLXv6sU.png){#fig:data-tree}
 
 At the root node the Gini coefficient was 0.238 for a sample size of 232 samples. Moving towards the true side of the graph, we found that Gini coefficients gradualy become closer to zero, with last branching node to only contain a Gini coefficient of 0.037. It should be noted that the data tree node is very lopsided. This could possibly indicate that the computational cost per each decision is rather high @lecture:2.
 
