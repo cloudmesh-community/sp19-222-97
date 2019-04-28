@@ -2,6 +2,8 @@
 
 :warning: in review 
 
+:wave: describe the tree in a paragraph and provide a link to the figure
+
 | Zach Levy
 | zwlevy@iu.edu
 | Indiana University
