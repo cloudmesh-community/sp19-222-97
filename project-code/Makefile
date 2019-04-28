@@ -11,7 +11,7 @@ docker-build:
 
 docker-start:
 	@echo "Starting new service in container..."
-	docker run -v /home/:home/ -p 8080:8080 zwlevy/tetris
+	docker run -v /home/:/home/ -p 8080:8080 zwlevy/tetris
 
 service:
 	@echo "Creating service..."
