@@ -4,8 +4,6 @@
 
 :wave: spaces between a new paragraph imply a new section/subsection combine paragraphs ore make sub sections with ###
 
-:wave: in addition to Figure 4, is there a different way that you can display that information? Its pretty much unreadable, 
-
 | Zach Levy
 | zwlevy@iu.edu
 | Indiana University
