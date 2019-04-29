@@ -6,7 +6,7 @@ docker-all: docker-build docker-start
 
 docker-build:
 	@echo "Building image from docker file..."
-	docker build --no-cache --pull -t zwlevy/tetris .
+	docker build --no-cache --pull -t zwlevy/tetris:latest .
 	@echo "Image done..."
 
 docker-start:
