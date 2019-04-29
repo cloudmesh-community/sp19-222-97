@@ -1,14 +1,10 @@
 markdown
 connexion
-csv
 graphviz
 flask
-io
-IPython.core.interactiveshell
-os
+IPython
 requests
 numpy
-matplotlib.pyplot
+matplotlib
 scipy
 sklearn
-sklearn.externals.six
