@@ -17,14 +17,14 @@ RUN apt-get install -y python3.7-distutils
 RUN apt-get install -y python3.7-dev
 
 RUN curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-RUN python get-pip.py 
+RUN python get-pip.py
 
 RUN pip install -U pip setuptools
 RUN pip install psutil
 
 RUN git clone https://github.com/cloudmesh-community/sp19-222-97.git
 
-WORKDIR zwlevy/tetris
+WORKDIR /sp-19-222-97/project-code
 
 EXPOSE 8080
 
