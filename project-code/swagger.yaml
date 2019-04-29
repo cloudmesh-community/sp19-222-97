@@ -27,7 +27,7 @@ paths:
       responses:
         "200":
           description: "lin_reg download OK"
-          shema: {}
+          schema: {}
 
   /lin_reg/read:
     get:
