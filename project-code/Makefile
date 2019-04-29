@@ -11,7 +11,7 @@ docker-build:
 
 docker-start:
 	@echo "Starting new service in container..."
-	docker run -v /home/:/home/ -p 8080:8080 zwlevy/tetris
+	docker run -v /home/:/home/ -p 8080:8080 zwlevy/tetris:latest
 
 service:
 	@echo "Creating service..."
@@ -31,7 +31,7 @@ docker-stop:
 
 docker-remove:
 	@echo "Removing image..."
-	docker rmi -f zwlevy/tetris
+	docker rmi -f zwlevy/tetris:latest
 	@echo "Image has been removed."
 
 docker-clean: docker-stop docker-remove
