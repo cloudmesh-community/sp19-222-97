@@ -21,7 +21,7 @@ produces:
 paths:
   /lin_reg/download/<output>:
     get:
-      operationId: project-code.linear_regressor.download
+      operationId: linear_regressor.download
       produces:
         - "application/json"
       responses:
@@ -31,7 +31,7 @@ paths:
 
   /lin_reg/read:
     get:
-      operationId: project-code.linear_regressor.read_csv
+      operationId: linear_regressor.read_csv
       produces:
         - "application/txt"
       responses:
@@ -41,7 +41,7 @@ paths:
 
   /lin_reg/analyze:
     get:
-      operationId: project-code.linear_regressor.linear_regression
+      operationId: linear_regressor.linear_regression
       produces:
         - "application/png"
       responses:
@@ -51,7 +51,7 @@ paths:
 
   /dt/download/<output>:
     get:
-      operationId: project-code.data_tree.download
+      operationId: data_tree.download
       produces:
         - "application/json"
       responses:
@@ -61,7 +61,7 @@ paths:
 
   /dt/analyze:
     get:
-      operationId: project-code.data_tree.data_tree
+      operationId: data_tree.data_tree
       produces:
         - "application/png"
       responses:
