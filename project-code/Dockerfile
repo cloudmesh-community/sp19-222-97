@@ -24,7 +24,7 @@ RUN pip install psutil
 
 RUN git clone https://github.com/cloudmesh-community/sp19-222-97.git
 
-WORKDIR tetris/
+WORKDIR zwlevy/tetris
 
 EXPOSE 8080
 
