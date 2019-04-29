@@ -153,12 +153,6 @@ paths:
           description: "OK"
           schema: {}
 
-
-  # Is a second read function really needed if it's the same?
-  # /dt/read:
-    # get:
-      # operationId: project-code.data_tree.read_csv
-
   /dt/analyze:
     get:
       operationId: project-code.data_tree.data_tree
