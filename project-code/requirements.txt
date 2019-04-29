@@ -1,5 +1,5 @@
 markdown
-connexion
+connexion[swagger-ui]
 graphviz
 flask
 IPython
