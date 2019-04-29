@@ -1,6 +1,7 @@
 swagger: "2.0"
 info:
   version: "1.0.0"
+  title: "Tetris Score Analyzer"
   description: "Analyzes Tetris games from the Tetris World Championships"
   termsOfService: "http://swagger.io.terms"
   contact:
@@ -25,7 +26,7 @@ paths:
         - "application/json"
       responses:
         "200":
-          description: "OK"
+          description: "lin_reg download OK"
           shema: {}
 
   /lin_reg/read:
@@ -35,7 +36,7 @@ paths:
         - "application/txt"
       responses:
         "200":
-          description: "OK"
+          description: "lin_reg read OK"
           schema: {}
 
   /lin_reg/analyze:
@@ -45,7 +46,7 @@ paths:
         - "application/png"
       responses:
         "200":
-          description: "OK"
+          description: "lin_reg analysis OK"
           schema: {}
 
   /dt/download/<output>:
@@ -55,7 +56,7 @@ paths:
         - "application/json"
       responses:
         "200":
-          description: "OK"
+          description: "dt read OK"
           schema: {}
 
   /dt/analyze:
@@ -65,5 +66,5 @@ paths:
         - "application/png"
       responses:
         "200":
-          description: "OK"
+          description: "dt analysis OK"
           schema: {}
