@@ -1,7 +1,5 @@
 # Tetris Score Analysis Server
 
-:warning: in review 
-
 | Zach Levy
 | zwlevy@iu.edu
 | Indiana University
